@@ -5,6 +5,7 @@ import 'package:mental_health/screens/goal_screen.dart';
 import 'package:mental_health/screens/journal_screen.dart';
 import 'package:mental_health/screens/meditation_screen.dart';
 import 'package:mental_health/screens/mood_screen.dart';
+import 'package:mental_health/screens/quiz/quiz.dart';
 
 class ActivitiesScreen extends StatelessWidget {
   const ActivitiesScreen({super.key});
@@ -44,6 +45,11 @@ class ActivitiesScreen extends StatelessWidget {
             subtitle: 'Breathing',
             screen: BreathingScreen(),
           ),
+          CustomListTile(
+              path: 'assets/animations/quiz.json',
+              title: 'PHQ9',
+              subtitle: '',
+              screen: Quiz())
           // CustomListTile(),
         ],
       ),

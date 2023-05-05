@@ -32,13 +32,17 @@ class GoalScreen extends StatelessWidget {
                     color: Colors.blue)),
           ),
           Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.all(Radius.circular(50)),
+            decoration: BoxDecoration(
+              border: Border.all(),
+              borderRadius: BorderRadius.all(Radius.circular(50)),
+            ),
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.only(left: 15, bottom: 20, right: 20, top: 10),
+            child: GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FirstRoute()),
               ),
-              margin: EdgeInsets.all(10),
-              padding:
-                  EdgeInsets.only(left: 15, bottom: 20, right: 20, top: 10),
               child: ListTile(
                 leading: Image(
                   image: NetworkImage(
@@ -48,24 +52,24 @@ class GoalScreen extends StatelessWidget {
                   'Get Fit',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_sharp,
-                    ),
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const FirstRoute()),
-                        )),
-              )),
-          Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.all(Radius.circular(50)),
+                trailing: Icon(
+                  Icons.arrow_forward_ios_sharp,
+                ),
               ),
-              padding:
-                  EdgeInsets.only(left: 15, bottom: 20, right: 20, top: 10),
-              margin: EdgeInsets.all(10),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(),
+              borderRadius: BorderRadius.all(Radius.circular(50)),
+            ),
+            padding: EdgeInsets.only(left: 15, bottom: 20, right: 20, top: 10),
+            margin: EdgeInsets.all(10),
+            child: GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ThirdRoute()),
+              ),
               child: ListTile(
                 leading: Image(
                   image: AssetImage('assets/images/sleep.jpeg'),
@@ -74,16 +78,12 @@ class GoalScreen extends StatelessWidget {
                   'Better Sleep',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_sharp,
-                    ),
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ThirdRoute()),
-                        )),
-              )),
+                trailing: Icon(
+                  Icons.arrow_forward_ios_sharp,
+                ),
+              ),
+            ),
+          ),
           Container(
               decoration: BoxDecoration(
                 border: Border.all(),
@@ -92,23 +92,23 @@ class GoalScreen extends StatelessWidget {
               padding:
                   EdgeInsets.only(left: 15, bottom: 20, right: 20, top: 10),
               margin: EdgeInsets.all(10),
-              child: ListTile(
-                leading: Image(
-                  image: AssetImage('assets/images/live.jpg'),
+              child: GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
                 ),
-                title: Text(
-                  'Live Healtier',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                child: ListTile(
+                  leading: Image(
+                    image: AssetImage('assets/images/live.jpg'),
+                  ),
+                  title: Text(
+                    'Live Healtier',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios_sharp,
+                  ),
                 ),
-                trailing: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios_sharp,
-                    ),
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SecondRoute()),
-                        )),
               )),
         ],
       ),

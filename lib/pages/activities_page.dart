@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health/components/custom_list_tile.dart';
+import 'package:mental_health/screens/breathing_screen.dart';
+import 'package:mental_health/screens/goal_screen.dart';
 import 'package:mental_health/screens/journal_screen.dart';
 import 'package:mental_health/screens/meditation_screen.dart';
 import 'package:mental_health/screens/mood_screen.dart';
@@ -30,7 +32,18 @@ class ActivitiesScreen extends StatelessWidget {
               path: 'assets/animations/emoji.json',
               title: 'Mood',
               subtitle: 'Track Your Emotions',
-              screen: MoodScreen())
+              screen: MoodScreen()),
+          CustomListTile(
+              path: 'assets/animations/target.json',
+              title: 'Goals',
+              subtitle: 'Dream BIg',
+              screen: GoalScreen()),
+          CustomListTile(
+            path: 'assets/animations/breathing-icon.json',
+            title: 'Breathing',
+            subtitle: 'Breathing',
+            screen: BreathingScreen(),
+          ),
           // CustomListTile(),
         ],
       ),

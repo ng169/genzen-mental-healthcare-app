@@ -71,7 +71,7 @@ class _ProfilePageState extends State<ProfilePage> {
       children: [
         CalendarDatePicker2(
           config: CalendarDatePicker2Config(),
-          value: context.watch<DateProvider>().date,
+          value: context.read<DateProvider>().date,
           onValueChanged: (dates) =>
               context.read<DateProvider>().setDate(dates),
         ),
